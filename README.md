@@ -103,8 +103,10 @@ skills, or just trigger one (below).
 
 ```
 1. Plan it.        → run grill-me (or grill-with-docs) until the system is clear
-2. Scaffold it.    → run scaffold-context   (asks your stack, pins LATEST stable versions,
-                                              writes slim context + router AGENTS.md + specs/)
+2. Scaffold it.    → run scaffold-context   (grills name/brand/design, asks your stack, pins
+                                              LATEST stable versions, adopts the stack's official
+                                              lint config, asks your naming conventions, writes
+                                              slim context + router AGENTS.md + specs/)
 3. Wire delivery.  → run scaffold-delivery   (branch convention, CI, prod-via-tag, hook)
 4. Build, unit by unit:
    → run spec-unit on unit 01  → it scores complexity and routes:
@@ -135,13 +137,20 @@ Full detail, including the model-routing rubric and the git/CI shape, is in
 
 ---
 
-## Two habits the skills enforce for you
+## Habits the skills enforce for you
 
 - **Latest-stable versions, never from memory.** Agents pull stale version numbers from
   training data. `scaffold-context` and `spec-unit` resolve current releases from the live
   registry (`npm view`, `pip index versions`, `cargo search`, …) and pin them.
 - **Design quality isn't optional.** Any unit that touches an interface automatically routes
   through `frontend-design` (to build) and `impeccable` (to polish) — you don't have to ask.
+- **The name and brand are decided, not vibed.** `scaffold-context` grills the product name,
+  personality, and visual direction before writing files, so the overview and UI tokens come
+  from a real decision instead of placeholders.
+- **Best-practice tooling by default.** It adopts the stack's official/recommended lint+format
+  config (`eslint-config-next`, Ruff, Clippy, golangci-lint, …) and captures your naming
+  conventions up front — enforceable ones go into that config, judgment ones into
+  `code-standards.md`.
 
 ---
 

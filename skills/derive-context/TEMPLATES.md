@@ -104,15 +104,19 @@ in `architecture.md`.
 # Code Standards
 
 Enforced automatically (do not restate — see config):
-- [linter/formatter/type config path, e.g. `clippy.toml`, `.eslintrc`, `pyproject [tool.ruff]`]
+- [linter/formatter/type config path, e.g. `clippy.toml`, `eslint.config.js`, `pyproject [tool.ruff]`]
+- [name the official/recommended config it extends, e.g. `eslint-config-next`, ruff default set]
 
 Conventions NOT machine-enforced (these are why this file exists):
-- [observed convention the agent must follow]
+- File/folder naming — [PascalCase / kebab-case / snake_case; test-file pattern; folder layout]
+- Identifier naming — [components, hooks/utils, constants, types — only what the config can't pin]
+- Imports — [ordering, path aliases like `@/…`] · [other house rules]
 
 ## File Organization
 - `[folder]/` — [what belongs here]
 ```
-Keep only judgment rules. If a tool already enforces it, link the config and move on.
+Keep only judgment rules. If a tool already enforces it (file-case plugin, import-order,
+naming-convention rule), configure it there and link the config — don't duplicate it here.
 
 ---
 
@@ -120,6 +124,11 @@ Keep only judgment rules. If a tool already enforces it, link the config and mov
 
 ```markdown
 # UI Context
+## Brand & Voice
+- Name: [product name]   ·   Personality: [3–5 adjectives it IS] · not: [adjectives it's NOT]
+- Voice/tone for copy: [from the brand grill]
+## Visual Direction
+- [mood, light/dark, density, type feel, references to resemble / avoid — drove the tokens below]
 ## Theme / Tokens
 | Role | Token | Value |
 |---|---|---|

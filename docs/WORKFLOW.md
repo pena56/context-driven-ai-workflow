@@ -31,11 +31,18 @@ without hesitation: what it does, who it's for, the core flow, the hard parts, w
 scope, the stack and why. Don't scaffold before this is resolved — the scaffolder turns a
 *resolved* plan into files; it is not the planning step.
 
+The product grill stops at *function* — it deliberately doesn't settle the **name**, the brand
+personality, or the **visual direction**. Those are a second, focused grill that `scaffold-context`
+runs at its top (step 0), since the name seeds the overview and the direction seeds the UI tokens.
+
 ## Phase 2 — Establish context
 
-- **New project → `scaffold-context`.** Asks your stack, **pins latest-stable versions from
-  the live registry**, writes the slim context files (skipping `ui-context.md` for non-UI),
-  emits the router `AGENTS.md`, and seeds `context/specs/` with a build plan (via `to-issues`).
+- **New project → `scaffold-context`.** Runs the **brand/naming/design grill**, asks your stack,
+  **pins latest-stable versions from the live registry**, adopts the stack's **official lint/format
+  config** (and notes unit 01 will wire it), asks your **convention preferences** (file-naming case,
+  identifier naming, imports — routing each to config or `code-standards.md`), writes the slim
+  context files (skipping `ui-context.md` for non-UI), emits the router `AGENTS.md`, and seeds
+  `context/specs/` with a build plan (via `to-issues`).
 - **Existing project → `derive-context`.** Infers the stack from manifests, maps boundaries by
   *sampling* (not reading the whole repo), writes the same slim files bottom-up, and flags any
   inferred invariants for you to confirm.
@@ -103,5 +110,6 @@ context window.
   context the task needs, and nothing it doesn't.
 - Drift is caught by CI and a fresh-context reviewer, not by hoping the agent remembers.
 - Cost scales with task difficulty, not with a flat "always use the biggest model".
-- Design quality and current dependency versions are defaults, not things you remember to ask
-  for.
+- Design quality, the product's name/brand, current dependency versions, the stack's official
+  lint config, and your naming conventions are all defaults captured up front — not things you
+  remember to ask for.
