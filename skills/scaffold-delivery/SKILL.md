@@ -62,3 +62,7 @@ first release command: `git tag vX.Y.Z && git push --tags` → prod.
 - Do not auto-deploy `main` to production — production is gated behind the release tag.
 - Do not hardcode stack commands — resolve them from the router CLAUDE.md / manifest.
 - Do not let the tracker and Issues both own the backlog — Issues are canonical.
+
+## Credits
+Orchestrates `to-issues` ([Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-issues))
+and the Claude Code built-ins `code-review` and `update-config`.

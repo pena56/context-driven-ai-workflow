@@ -71,3 +71,7 @@ type; only `progress-tracker.md` is always-read. Fill in the chosen verify comma
 - Do not write a `ui-context.md` for a non-UI project.
 - Do not hardcode JS idioms or `npm run build` — use the chosen stack's commands.
 - Do not pre-install or pre-document dependencies for units not yet reached.
+
+## Credits
+Orchestrates third-party skills by [Matt Pocock](https://github.com/mattpocock/skills):
+`grill-me`, `grill-with-docs`, and `to-issues`.

@@ -76,3 +76,10 @@ On done + verified: mark Unit NN complete in `progress-tracker.md`, branch
 - Do not combine boundaries in one unit (UI + DB + background = three units).
 - Do not hand a "complex" unit to an executor — that is the failure mode this prevents.
 - Do not let `progress-tracker.md` become a second backlog — Issues are the source of truth.
+
+## Credits
+Orchestrates third-party skills: `tdd` ([Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd)),
+`grill-me`/`grill-with-docs` ([Matt Pocock](https://github.com/mattpocock/skills)),
+`impeccable` ([Paul Bakaus](https://github.com/pbakaus/impeccable)),
+`frontend-design` ([Anthropic](https://github.com/anthropics/claude-plugins-public/tree/main/plugins/frontend-design)),
+`code-review` (Claude Code built-in).

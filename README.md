@@ -50,7 +50,8 @@ context-driven-ai-workflow/
 │   ├── DESIGN-DECISIONS.md          ← every decision + why it was made
 │   ├── WORKFLOW.md                  ← the end-to-end loop, model routing, git/CI
 │   ├── PORTING.md                   ← using it with Codex / Cursor / Copilot
-│   └── CRITIQUE.md                  ← the original methodology, critiqued
+│   ├── CRITIQUE.md                  ← the original methodology, critiqued
+│   └── CREDITS.md                   ← the third-party skills this orchestrates + their authors
 └── skills/
     ├── derive-context/              ← onboard an EXISTING repo (bottom-up)
     ├── scaffold-context/            ← start a NEW project (top-down)
@@ -67,10 +68,13 @@ context-driven-ai-workflow/
 | **`spec-unit`** | You're about to build a feature | A scoped spec file, a complexity score, a GitHub issue link, and the right model route |
 | **`scaffold-delivery`** | You're wiring up the repo | Branch convention, CI, PR/issue templates, tag-gated prod deploy, doc-sync hook |
 
-These lean on skills you likely already have: **`grill-me` / `grill-with-docs`** (planning),
-**`tdd`** (the executor), **`code-review`** (the fresh-context reviewer), **`to-issues`**
-(decompose into units), **`impeccable` / `frontend-design`** (UI quality), **`update-config`**
-(hooks).
+These lean on skills you likely already have — all third-party, fully credited in
+[docs/CREDITS.md](docs/CREDITS.md): **`grill-me` / `grill-with-docs`** ([Matt Pocock](https://github.com/mattpocock/skills), planning),
+**`tdd`** ([Matt Pocock](https://github.com/mattpocock/skills), the executor),
+**`to-issues`** ([Matt Pocock](https://github.com/mattpocock/skills), decompose into units),
+**`impeccable`** ([Paul Bakaus](https://github.com/pbakaus/impeccable)) /
+**`frontend-design`** ([Anthropic](https://github.com/anthropics/claude-plugins-public/tree/main/plugins/frontend-design)) (UI quality),
+**`code-review`** / **`update-config`** (Claude Code built-ins).
 
 ---
 
@@ -155,6 +159,8 @@ automation (auto-triggered skills, model routing, hooks) is specific. See
 
 ## Credits
 
-Adapted and substantially reworked from JavaScript Mastery's *"From Idea to Product: The
-AI-Driven Developer's Playbook"* (the Six-File Context System). The critique that motivated
-the changes is in [docs/CRITIQUE.md](docs/CRITIQUE.md).
+The methodology is adapted and substantially reworked from JavaScript Mastery's *"From Idea to
+Product: The AI-Driven Developer's Playbook"* (the Six-File Context System); the critique that
+motivated the changes is in [docs/CRITIQUE.md](docs/CRITIQUE.md). The third-party skills this
+workflow orchestrates — by Matt Pocock, Paul Bakaus, and Anthropic — are credited with links
+in [docs/CREDITS.md](docs/CREDITS.md).
