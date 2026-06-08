@@ -10,7 +10,7 @@ quality artifact and the token-optimization payload: a tight spec lets a cheaper
 build the unit reading only the spec + the one or two boundary files it names — not all the
 context files. A vague spec makes the executor flail and re-read everything, losing the win.
 
-Reads context via the router `CLAUDE.md` — load only the files the unit touches.
+Reads context via the router `AGENTS.md` — load only the files the unit touches.
 
 ## Workflow
 
@@ -38,7 +38,7 @@ Always state the route + why. The user may override (`force: inline` / `force: s
 ### 4. Write the spec file
 Use the five-section template in [REFERENCE.md](REFERENCE.md). Save to
 `context/specs/NN-feature-name.md` where NN is the next unit number. Pull verify commands
-from the router `CLAUDE.md` (stack-agnostic — never hardcode `npm run build`).
+from the router `AGENTS.md` (stack-agnostic — never hardcode `npm run build`).
 
 ### 5. Link to the issue (issue = disk, tracker = RAM)
 If `gh` is available and the repo has a remote:

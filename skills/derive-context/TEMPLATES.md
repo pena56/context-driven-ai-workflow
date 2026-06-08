@@ -5,10 +5,20 @@ Keep them short — every line is a token paid on the sessions that load it.
 
 ---
 
-## Router `CLAUDE.md` (project root)
+## Router entry file (project root)
 
 This is the key token-optimization artifact. It is a **router**, not a loader: it tells the
 agent *which* context file to read for *which* kind of task, instead of loading all of them.
+
+**Write it as `AGENTS.md`** — the cross-agent standard (Codex/Cursor/Copilot/Claude Code all
+read it or an equivalent). Then add a one-line `CLAUDE.md` so Claude Code finds it too:
+
+```markdown
+# CLAUDE.md
+See `AGENTS.md` — it is the canonical project router. Read it first.
+```
+
+The `AGENTS.md` content:
 
 ```markdown
 # Project Context

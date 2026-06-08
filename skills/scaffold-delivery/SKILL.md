@@ -6,7 +6,7 @@ description: Scaffold the git/CI/deploy workflow for a project — branch conven
 # Scaffold Delivery
 
 Turn the context/spec workflow into a real delivery pipeline. Stack-agnostic: read the verify
-commands from the router `CLAUDE.md` (or detect them) — never hardcode `npm run build`.
+commands from the router `AGENTS.md` (or detect them) — never hardcode `npm run build`.
 
 Two sources of truth, kept distinct: **GitHub Issues = disk** (durable backlog, unit
 tracking), **`progress-tracker.md` = RAM** (live session state). They link by number; they do

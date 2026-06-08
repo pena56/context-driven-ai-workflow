@@ -35,12 +35,12 @@ scope, the stack and why. Don't scaffold before this is resolved — the scaffol
 
 - **New project → `scaffold-context`.** Asks your stack, **pins latest-stable versions from
   the live registry**, writes the slim context files (skipping `ui-context.md` for non-UI),
-  emits the router `CLAUDE.md`, and seeds `context/specs/` with a build plan (via `to-issues`).
+  emits the router `AGENTS.md`, and seeds `context/specs/` with a build plan (via `to-issues`).
 - **Existing project → `derive-context`.** Infers the stack from manifests, maps boundaries by
   *sampling* (not reading the whole repo), writes the same slim files bottom-up, and flags any
   inferred invariants for you to confirm.
 
-Either way you end with: `context/` (the slim files), a router `CLAUDE.md`, and a build plan.
+Either way you end with: `context/` (the slim files), a router `AGENTS.md`, and a build plan.
 
 ## Phase 3 — Wire delivery — `scaffold-delivery`
 
@@ -99,7 +99,7 @@ context window.
 
 ## Why this beats "just prompt the agent"
 
-- The agent never starts from zero — the router `CLAUDE.md` + tracker restore exactly the
+- The agent never starts from zero — the router `AGENTS.md` + tracker restore exactly the
   context the task needs, and nothing it doesn't.
 - Drift is caught by CI and a fresh-context reviewer, not by hoping the agent remembers.
 - Cost scales with task difficulty, not with a flat "always use the biggest model".

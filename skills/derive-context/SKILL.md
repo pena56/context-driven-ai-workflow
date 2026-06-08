@@ -51,10 +51,11 @@ Use the templates in [TEMPLATES.md](TEMPLATES.md). Rules:
 - **progress-tracker.md**: seed `Current Phase: onboarding`, list real next-up items if
   obvious from TODOs/issues, otherwise leave for the user.
 
-### 4. Generate the router `CLAUDE.md`
-Use the router template in [TEMPLATES.md](TEMPLATES.md). It must load context **on demand
-by task type**, not all-at-once. Only `progress-tracker.md` is always-read (it's small and
-task-relevant). Fill in the detected verify commands.
+### 4. Generate the router entry file
+Use the router template in [TEMPLATES.md](TEMPLATES.md). Write it as **`AGENTS.md`** (the
+cross-agent standard) plus a one-line `CLAUDE.md` pointer to it. It must load context **on
+demand by task type**, not all-at-once. Only `progress-tracker.md` is always-read (it's small
+and task-relevant). Fill in the detected verify commands.
 
 ### 5. Report
 - Stack detected + confidence.

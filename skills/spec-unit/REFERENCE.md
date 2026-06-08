@@ -27,6 +27,11 @@ reasoning *up front* on the spec; then execution is cheap and safe.
 - Pure mechanical → Haiku.
 - Review in a FRESH context window — a reviewer that didn't write the code catches more.
 
+**On single-model agents (Codex/Cursor/etc.):** the complexity score still applies — it tells
+you whether to build inline, split the unit, or stop and re-plan. You just skip the
+model-switch (or map the routes to that agent's own tiers, e.g. reasoning effort). The
+fresh-context review still matters; run it as a separate pass.
+
 ---
 
 ## Spec file template
@@ -60,7 +65,7 @@ relevant. OMIT this section entirely for non-UI units.]
 
 ## Verify when done
 - [ ] [behavioural condition specific to this unit]
-- [ ] [BUILD CMD] passes        ← from router CLAUDE.md, stack-specific
+- [ ] [BUILD CMD] passes        ← from router AGENTS.md, stack-specific
 - [ ] [TEST CMD] passes
 - [ ] [LINT/TYPECHECK CMD] clean
 - [ ] No invariant in architecture.md violated

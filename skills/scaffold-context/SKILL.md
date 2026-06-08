@@ -47,7 +47,7 @@ Greenfield differences vs derive-context:
 - `code-standards.md` still defers to linter/formatter/type config — note "configure
   [tool] in unit 01" since the configs don't exist yet.
 
-### 4. Generate the router `CLAUDE.md`
+### 4. Generate the router `AGENTS.md` (+ `CLAUDE.md` pointer)
 Use the router template in
 [derive-context/TEMPLATES.md](../derive-context/TEMPLATES.md). On-demand loading by task
 type; only `progress-tracker.md` is always-read. Fill in the chosen verify commands.

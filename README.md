@@ -49,6 +49,7 @@ context-driven-ai-workflow/
 ├── docs/
 │   ├── DESIGN-DECISIONS.md          ← every decision + why it was made
 │   ├── WORKFLOW.md                  ← the end-to-end loop, model routing, git/CI
+│   ├── PORTING.md                   ← using it with Codex / Cursor / Copilot
 │   └── CRITIQUE.md                  ← the original methodology, critiqued
 └── skills/
     ├── derive-context/              ← onboard an EXISTING repo (bottom-up)
@@ -61,7 +62,7 @@ context-driven-ai-workflow/
 
 | Skill | Use it when | What it produces |
 |---|---|---|
-| **`derive-context`** | You open an existing/brownfield repo | Slim context files inferred *from the code* + a router `CLAUDE.md` |
+| **`derive-context`** | You open an existing/brownfield repo | Slim context files inferred *from the code* + a router `AGENTS.md` |
 | **`scaffold-context`** | You're starting something new | Context files from your planning conversation + a build-plan `specs/` folder |
 | **`spec-unit`** | You're about to build a feature | A scoped spec file, a complexity score, a GitHub issue link, and the right model route |
 | **`scaffold-delivery`** | You're wiring up the repo | Branch convention, CI, PR/issue templates, tag-gated prod deploy, doc-sync hook |
@@ -99,7 +100,7 @@ skills, or just trigger one (below).
 ```
 1. Plan it.        → run grill-me (or grill-with-docs) until the system is clear
 2. Scaffold it.    → run scaffold-context   (asks your stack, pins LATEST stable versions,
-                                              writes slim context + router CLAUDE.md + specs/)
+                                              writes slim context + router AGENTS.md + specs/)
 3. Wire delivery.  → run scaffold-delivery   (branch convention, CI, prod-via-tag, hook)
 4. Build, unit by unit:
    → run spec-unit on unit 01  → it scores complexity and routes:
@@ -146,6 +147,11 @@ This is **git + GitHub + some CI runner** flavored, but **stack-agnostic** — n
 Next.js or any language. Skills detect the stack and skip what doesn't apply (no UI file for a
 backend service). It also degrades gracefully: no remote → local-only mode; tiny project →
 fewer files. See [docs/DESIGN-DECISIONS.md](docs/DESIGN-DECISIONS.md) for the boundaries.
+
+It's also **agent-portable**: the router is written as `AGENTS.md` (the cross-agent standard)
+so the method works on Codex, Cursor, and Copilot too — only Claude Code's convenience
+automation (auto-triggered skills, model routing, hooks) is specific. See
+[docs/PORTING.md](docs/PORTING.md).
 
 ## Credits
 
